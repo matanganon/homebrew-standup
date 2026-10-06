@@ -27,9 +27,9 @@ cask "standup" do
   # This development build is not notarized. Remove the quarantine attribute so
   # Gatekeeper allows it to launch. (Not needed once releases are notarized.)
   postflight_steps do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/StandUp.app"],
-                   sudo: false
+    run "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "{{appdir}}/StandUp.app"],
+        must_succeed: false
   end
 
   uninstall quit: "com.standup.app"
