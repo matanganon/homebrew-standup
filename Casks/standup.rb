@@ -6,8 +6,8 @@
 # The release tooling (scripts/release.sh + scripts/update_cask.sh) keeps the
 # `version` and `sha256` fields in sync automatically after each release.
 cask "standup" do
-  version "1.0.2"
-  sha256 "76de95d73c98dd2a3fea7a83295119a7d1493385d4c68f0ae38e65d72d04a573"
+  version "1.0.3"
+  sha256 "4aa365039383e9156171384a67e0b75af3a68102ed86c80957954541743af0fd"
 
   url "https://github.com/matanganon/StandUp/releases/download/v#{version}/StandUp-#{version}.zip"
   name "StandUp"
